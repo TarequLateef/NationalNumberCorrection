@@ -1,0 +1,8 @@
+<div class="input-group" style="margin: 10px 0px;">
+    <span class="input-group-text">{{txtTitle}}</span>
+    <input type="text" class="form-control" [ngClass]="{'is-valid':!ValidCase && numberText.length!=0,'is-invalid':ValidCase}" [placeholder]="txtTitle" (change)="FieldValidation()" (keydown)="TextChange($event)" [(ngModel)]="numberText" >
+    <div [ngClass]="{'valid-feedback':!ValidCase,'invalid-feedback':ValidCase}" [hidden]="!ValidCase">
+        {{ValidateMsg}}
+    </div>
+ </div>
+
